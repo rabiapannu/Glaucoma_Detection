@@ -2,70 +2,71 @@
 Segmentation of Optic Disc (OD) and Optic Cup (OC), feature extraction, and glaucoma classification using CDR and NRR metrics. <br/>
 
 ## Data preparation 
-Drishti-GS dataset was used for this research.
-The folder structure should be as follows: 
+Drishti-GS dataset was used for this research.<br/>
+The folder structure should be as follows: <br/><br/>
 
-│Drishti-GS/
-├──Drishti-GS/Drishti-GS1_diagnosis.xlsx
-├──Train/
-│  ├── Fundus_Images/
-│  ├───├── Train/
-│  │   ├────├── 002.png
-│  │   ├────├── 004.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OC/
-│  ├───├── Train/
-│  │   ├────├── 002.png
-│  │   ├────├── 004.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OD/
-│  ├───├── Train/
-│  │   ├────├── 002.png
-│  │   ├────├── 004.png
-│  │   ├────├── ...
-│  ├── ......
-├──Validation/
-│  ├── Fundus_Images/
-│  ├───├── Validation/
-│  │   ├────├── 001.png
-│  │   ├────├── 006.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OC/
-│  ├───├── Validation/
-│  │   ├────├── 001.png
-│  │   ├────├── 006.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OD/
-│  ├───├── Validation/
-│  │   ├────├── 002.png
-│  │   ├────├── 006.png
-│  │   ├────├── ...
-│  ├── ......
-├──Test/
-│  ├── Fundus_Images/
-│  ├───├── Test/
-│  │   ├────├── 003.png
-│  │   ├────├── 005.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OC/
-│  ├───├── Test/
-│  │   ├────├── 003.png
-│  │   ├────├── 005.png
-│  │   ├────├── ...
-│  ├── Ground_Truths\_OD/
-│  ├───├── Test/
-│  │   ├────├── 003.png
-│  │   ├────├── 005.png
-│  │   ├────├── ...
-│  ├── ......
-
+│Drishti-GS/<br/>
+├──Drishti-GS/Drishti-GS1_diagnosis.xlsx<br/>
+├──Train/<br/>
+│  ├── Fundus_Images/<br/>
+│  ├───├── Train/<br/>
+│  │   ├────├── 002.png<br/>
+│  │   ├────├── 004.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OC/<br/>
+│  ├───├── Train/<br/>
+│  │   ├────├── 002.png<br/>
+│  │   ├────├── 004.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OD/<br/>
+│  ├───├── Train/<br/>
+│  │   ├────├── 002.png<br/>
+│  │   ├────├── 004.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── ......<br/>
+├──Validation/<br/>
+│  ├── Fundus_Images/<br/>
+│  ├───├── Validation/<br/>
+│  │   ├────├── 001.png<br/>
+│  │   ├────├── 006.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OC/<br/>
+│  ├───├── Validation/<br/>
+│  │   ├────├── 001.png<br/>
+│  │   ├────├── 006.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OD/<br/>
+│  ├───├── Validation/<br/>
+│  │   ├────├── 002.png<br/>
+│  │   ├────├── 006.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── ......<br/>
+├──Test/<br/>
+│  ├── Fundus_Images/<br/>
+│  ├───├── Test/<br/>
+│  │   ├────├── 003.png<br/>
+│  │   ├────├── 005.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OC/<br/>
+│  ├───├── Test/<br/>
+│  │   ├────├── 003.png<br/>
+│  │   ├────├── 005.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── Ground_Truths\_OD/<br/>
+│  ├───├── Test/<br/>
+│  │   ├────├── 003.png<br/>
+│  │   ├────├── 005.png<br/>
+│  │   ├────├── ...<br/>
+│  ├── ......<br/>
 <br/>
 
 ## Segmentation
 
 The _segmentation/_ folder has two scripts named as **train.py** and **test.py**. <br/>
+
 These two scipts can be run to train and test Optic Disc (OD) and Optic Cup (OC) segmentation respectively. <br/>
 For example to train the model for OC segmentation, run the following script on terminal: <br/>
+
 python Segmentation/train.py -train-img-path "Drishti-GS/Train/Fundus_Images/" -train-mask-path "Drishti-GS/Train/Ground\_Truths\_OC/" -val-img-path "Drishti-GS/Validation/Fundus\_Images/" -val-mask-path "Drishti-GS/Validation/Ground\_Truths\_OC/" -saved-model "saved\_models/OC_model.keras"
 
 <br/>
