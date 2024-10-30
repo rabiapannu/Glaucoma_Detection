@@ -5,6 +5,7 @@ Segmentation of Optic Disc (OD) and Optic Cup (OC), feature extraction, and glau
 Drishti-GS dataset was used for this research.<br/>
 The folder structure should be as follows: <br/><br/>
 
+<pre>
 │Drishti-GS/<br/>
 ├──Drishti-GS/Drishti-GS1_diagnosis.xlsx<br/>
 ├──Train/<br/>
@@ -58,6 +59,7 @@ The folder structure should be as follows: <br/><br/>
 │  │   ├────├── 005.png<br/>
 │  │   ├────├── ...<br/>
 │  ├── ......<br/>
+</pre>
 <br/>
 
 ## Segmentation
