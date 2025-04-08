@@ -15,6 +15,7 @@ You can install the required dependencies using:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Datasets Used
 This research utilizes four publicly available retinal fundus image datasets:
@@ -113,6 +114,7 @@ python Segmentation/train.py \
   --batch-size 8 \
   --epochs 50 \
   --lr 0.001
+```
 
 Similarly, you can also train for OD segmentation by changing the mask paths. <br/>
 
@@ -135,7 +137,7 @@ python main.py \
   --OC-model "saved_models/OC_model.keras" \
   --OD-model "saved_models/OD_model.keras" \
   --dataset "Path/to/Dataset_directory"
-
+```
 
 ## Reproducibility and Testing
 To ensure consistent results across runs, we recommend the following:
